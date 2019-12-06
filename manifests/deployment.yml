@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: rajanrajapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: rajanrajapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: rajanrajapipelinesjavascriptdocker 
+          image: omnistoreacr.azurecr.io/rajanrajapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
